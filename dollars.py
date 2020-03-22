@@ -16,13 +16,13 @@ def kursScrape():
 kursScrape()
 def count():
     getSek = entry.get()
-    getSek = float(getSek)
-
     try:
+        getSek = float(getSek)
         exchange = round(getSek / dollarKurs, 2)
         info['text'] = f'Du får {exchange} dollar!'
     except:
-        print('Funkar inte')
+        info['text'] = 'Fel, försök igen'
+
 
 
 
