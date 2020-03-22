@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import requests
 from bs4 import BeautifulSoup
+from PIL import Image, ImageTk
 
 
 class Exchange:
@@ -29,6 +30,7 @@ class Exchange:
         self.master = master
         master.title('Valutaomvandlare 1.5')
         master.geometry('254x147')
+        master.iconbitmap('asd_LlF_icon.ico')
 
         self.head1 = Label(root, text='Valutaomvandlare')
         self.head1.grid(row=0, column=1)
@@ -47,6 +49,14 @@ class Exchange:
 
         self.info = Label(root)
         self.info.grid(row=3, column=1)
+
+#        self.img = Image.open('d.jpg')
+#        self.img = self.img.resize((50, 50))
+#        self.img = ImageTk.PhotoImage(self.img)
+#        self.image = Label(root, image=self.img)
+#        self.image.grid(row=2, column=3, sticky=E)
+
+
 
 
 
