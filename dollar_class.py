@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import requests
 from bs4 import BeautifulSoup
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 
 
 class Exchange:
@@ -17,7 +17,7 @@ class Exchange:
 
         return dollarKurs
 
-    def count(self):
+    def count(self, *args):
         getSek = self.entry.get()
         try:
             getSek = float(getSek)
@@ -43,6 +43,7 @@ class Exchange:
 
         self.entry = Entry(root)
         self.entry.grid(row=2, column=1, padx=5)
+        self.entry.bind('<Return>', self.count)
 
         self.btn1 = ttk.Button(root, text='Växla', command=self.count)
         self.btn1.grid(row=4, column=1, pady=20, padx=5)
